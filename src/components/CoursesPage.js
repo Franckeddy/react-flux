@@ -11,7 +11,7 @@ function CoursesPage() {
 
     return (
         <>
-            <h2>Courses</h2>,
+            <h2>Courses</h2>
             <CourseList courses={courses}/>
         </>
     )
