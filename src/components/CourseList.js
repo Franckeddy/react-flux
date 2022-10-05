@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CourseList(props) {
     return(
@@ -9,6 +9,7 @@ function CourseList(props) {
                     <th>Title</th>
                     <th>Author ID</th>
                     <th>Category</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -22,6 +23,9 @@ function CourseList(props) {
                             </td>
                             <td>{course.authorId}</td>
                             <td>{course.category}</td>
+                            <td>
+                                <button className="btn btn-danger" onClick={() => props.deleteCourse(course.id)}>Delete</button>
+                            </td>
                         </tr>)
                 })}
                 </tbody>
